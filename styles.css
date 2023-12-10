@@ -1,0 +1,459 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100vw;
+  height: 750px;
+  display: flex;
+}
+
+header .header-garrafa {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+header .header-left {
+  width: 50%;
+  height: 100%;
+  background-color: #0055AA;
+  position: relative;
+}
+
+header .header-left .header-flor {
+  width: 364px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+header .header-left h2 {
+  width: 290px;
+  position: absolute;
+  top: 308px;
+  left: 488px;
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  font-weight: 700;
+}
+
+header .header-left h2 span {
+  font-weight: 200;
+}
+
+header .header-left a img {
+  width: 180px;
+  padding-left: 391px;
+  margin-top: 60px;
+}
+
+header .header-left .header-flor2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+header .header-left .header-flor1 {
+  position: absolute;
+  left: 0;
+  bottom: 250px;
+}
+
+
+header .header-right {
+  width: 50%;
+  height: 100%;
+  background-image: url(./assets/bannerRight.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header .header-right .header-right-div {
+  width: 167px;
+  color: white;
+  position: absolute;
+  top: 418px;
+  right: 693px;
+  text-align: right;
+}
+
+header .header-right .header-right-div p {
+  font-weight: 900;
+}
+
+header .header-right .header-right-div p span {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+header .header-right nav {
+  display: flex;
+  gap: 39px;
+  margin-top: 102px;
+  margin-left: 32px;
+}
+
+header .header-right nav a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+section {
+  width: 100vw;
+  height: 400px;
+  background-color: #D3B16A;
+  position: relative;
+}
+
+section h2 {
+  width: 176px;
+  color: #7A570F;
+  font-size: 88px;
+  font-weight: 900;
+  position: absolute;
+  top: 71px;
+  right: 696px;
+}
+
+section .section-flor2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section .section-flor {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+section .section-flor1 {
+  position: absolute;
+  top: 161px;
+  left: 704px;
+}
+
+section .section-left {
+  position: absolute;
+  top: 116px;
+  left: 397px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+section .section-left .section-left-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  color: #7A570F;
+}
+
+section .section-left .section-left-div p {
+  width: 149px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+section .section-right {
+  position: absolute;
+  top: 116px;
+  right: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+section .section-right .section-right-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  color: #7A570F;
+}
+
+section .section-right .section-right-div div {
+  width: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+section .section-right .section-right-div p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.article-modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: gray;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 110;
+}
+
+nav button {
+  all: unset;
+  cursor: pointer;
+  color: white;
+}
+
+.article-modal .article-container {
+  width: 1078px;
+  height: 700px;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.article-modal .article-container .article-container-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 100px;
+  position: relative;
+  gap: 12px
+}
+
+.article-container-left h2 {
+  width: 340px;
+  font-weight: 700;
+  text-align: left;
+  font-size: 32px;
+  color: #0055AA;
+}
+
+.article-container-left form {
+  width: 624px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-container-left form .input-text {
+  width: 604px;
+  height: 60px;
+  font-size: 16px;
+  border: 1px solid #E4E2DD;
+  border-radius: 8px;
+  padding-left: 16px;
+  background-color: white;
+}
+
+.article-container-left form div {
+  width: 620px;
+  height: 60px;
+  display: flex;
+  gap: 20px;
+}
+
+.div-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  font-weight: normal;
+  color: #5B5B5B;
+}
+
+form button {
+  all: unset;
+  width: 266px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0055AA;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  bottom: 110px;
+  left: 420px;
+}
+
+.article-container-left .modal-garrafa {
+  position: absolute;
+  top: 73px;
+  right: -236px;
+  z-index: 111;
+}
+
+.article-modal .article-container .article-container-right {
+  width: 236px;
+  position: relative;
+  background-color: #0055AA;
+  overflow: hidden;
+}
+
+.article-container-right .modal-flor {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+.article-container-right .modal-flor1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+main {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding-bottom: 139px;
+}
+
+main .main-tampa {
+  position: absolute;
+  bottom: -50px;
+  right: 289px;
+  z-index: 100;
+}
+
+main .main-flor2 {
+  position: absolute;
+  bottom: -226px;
+  left: 141px;
+  z-index: 100;
+}
+
+main .main-div-top {
+  width: 1275px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .main-div-top .main-div-top-left {
+  width: 463px;
+  margin-top: 129px;
+}
+
+main .main-div-top .main-div-top-left h3 {
+  color: #0055AA;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 41px;
+}
+
+main .main-div-top .main-div-top-left p {
+  color: gray;
+  font-size:  15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+main .main-div-top .main-div-top-right .main-flor1 {
+  position: absolute;
+  top: 0;
+  right: 254px;
+}
+
+main .main-div-middle {
+  width: 1275px;
+  margin-top: 15px;
+}
+main .main-div-middle iframe {
+  width: 1140px;
+}
+
+main .main-div-middle h3 {
+  color: #D3B16A;
+  font-size: 36px;
+  margin-bottom: 31px;
+}
+
+main .main-div-bottom {
+  width: 1275px;
+  margin-top: 105px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px
+}
+
+main .main-div-bottom h3 {
+  width: 304px;
+  font-size: 36px;
+  color: #0055AA;
+}
+
+main .main-div-bottom-area {
+  display: flex;
+  gap: 25px;
+}
+
+main .main-div-bottom .main-div-bottom-area input {
+  all: unset;
+  width: 557px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding-left: 70px;
+  font-size: 16px;
+}
+
+main .main-div-bottom .main-div-bottom-area button {
+  all: unset;
+  width: 266px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0055AA;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  height: 250px;
+  background-color: #0055AA;
+  position: relative;
+}
+
+footer .footer-img {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer .footer-img1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+footer .footer-img2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
