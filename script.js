@@ -46,3 +46,22 @@ document.getElementById('submitButton').addEventListener('click', function(event
   alert('Cadastro efetuado com sucesso!');
 
 });
+
+// scroll suave 
+document.addEventListener("DOMContentLoaded", function () {
+  var links = document.querySelectorAll('.scroll');
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); 
+      var targetId = this.getAttribute('href').substring(1);
+
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, null, '/' + targetId);
+      }
+    });
+  });
+});
